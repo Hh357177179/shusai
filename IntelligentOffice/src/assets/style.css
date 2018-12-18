@@ -1,0 +1,43 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+html{
+  width: 100%;
+  min-height: 100%;
+}
+body{
+  width: 100%;
+  min-height: 100%;
+}
+input{
+  border:none;
+  outline: none;
+}
+i{
+  font-style: normal;
+}
+button{
+  border:none;
+  outline: none;
+}
+.clearfix:after{
+  content:"";
+  height:0;
+  line-height:0;
+  visibility:hidden;
+  display:block;
+  clear:both
+}
+.clearfix{
+  zoom: 1;
+}

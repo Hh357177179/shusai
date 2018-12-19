@@ -1,9 +1,14 @@
 <template>
   <div class="root">
     <div class="headers clearfix">
-      <div class="logo">我是logo</div>
+      <div class="logo clearfix" @click="backHome">
+        <div class="logo_pic">
+          <img src="../assets/img/biglogo.png" alt="">
+        </div>
+        <div class="logo_text">智能办公系统</div>
+      </div>
       <ul class="head_tab clearfix">
-        <router-link tag="li" to='/root'>首页</router-link>
+        <!-- <router-link tag="li" to='/root'>首页</router-link> -->
         <router-link tag="li" to='/staff'>人员管理</router-link>
         <router-link tag="li" to='/address'>地理信息</router-link>
         <router-link tag="li" to='/device'>设备管理</router-link>
@@ -20,6 +25,11 @@ export default {
   data () {
     return {
 
+    }
+  },
+  methods: {
+    backHome () {
+      this.$router.push('/root')
     }
   }
 }
@@ -41,8 +51,27 @@ export default {
       .logo{
         width: 15%;
         float: left;
-        // background: #ccc;
         height: 100%;
+        // min-width: 280px;
+        .logo_pic{
+          width: 28px;
+          height: 28px;
+          margin-left: 40px;
+          float: left;
+          margin-top: 25px;
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .logo_text{
+          float: left;
+          line-height: 80px;
+          color:rgba(25,31,37,0.85);
+          font-size: 24px;
+          font-weight: bold;
+          margin-left: 8px;
+        }
       }
       .head_tab{
         float: left;
